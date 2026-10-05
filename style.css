@@ -1,0 +1,373 @@
+/* =========================================================
+   EdTech Solutions Ltd - HTML & CSS Practical Exercise
+   HTML5 + CSS3 only. No Bootstrap or CSS frameworks.
+   ========================================================= */
+
+/* ---------- General Reset ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3f4650;
+    background: #ffffff;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+/* Decorative blue strip similar to the reference design */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 34px;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.75;
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            #79aee0 0,
+            #79aee0 2px,
+            #5d98d2 2px,
+            #5d98d2 26px
+        );
+}
+
+/* ---------- Header / Navigation ---------- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid #e7edf4;
+    box-shadow: 0 2px 12px rgba(50, 80, 110, 0.08);
+}
+
+.nav-container {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    color: #438bd0;
+    font-size: 1.25rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 28px;
+}
+
+.navigation a {
+    color: #4c5663;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.navigation a:hover {
+    color: #2d83d1;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    min-height: 610px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(247,251,255,0.98) 100%);
+}
+
+.hero-content {
+    padding: 45px 0;
+    margin: 150px;
+}
+
+.eyebrow {
+    color: #5a9bd8;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    max-width: 780px;
+    color: #68a2d5;
+    font-size: clamp(2.7rem, 6vw, 5.3rem);
+    line-height: 1.05;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.hero-text {
+    max-width: 700px;
+    font-size: 1.2rem;
+    color: #5c626a;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 7px;
+    font-weight: 700;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(40, 100, 160, 0.16);
+}
+
+.btn-primary {
+    color: #ffffff;
+    background: #68a7dc;
+    border: 2px solid #68a7dc;
+}
+
+.btn-primary:hover {
+    background: #4e91cf;
+}
+
+.btn-secondary {
+    color: #6199cc;
+    background: #ffffff;
+    border: 2px solid #91b9dc;
+}
+
+/* ---------- About ---------- */
+.about {
+    background: #f8fbfe;
+}
+
+.section-heading h2 {
+    color: #68a2d5;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.about-text {
+    max-width: 850px;
+    font-size: 1.1rem;
+    color: #626870;
+}
+
+.learning-box {
+    max-width: 780px;
+    margin: 50px auto 0;
+    padding: 50px 35px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #edf2f7;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(70, 100, 130, 0.10);
+}
+
+.learning-box h3 {
+    color: #69a2d4;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.learning-box p {
+    max-width: 580px;
+    margin: 0 auto 25px;
+    font-size: 1.05rem;
+    color: #636a73;
+}
+
+/* ---------- Training Programs ---------- */
+.training {
+    background: #ffffff;
+}
+
+.center {
+    text-align: center;
+}
+
+.center > p:last-child {
+    color: #68717b;
+    margin-bottom: 45px;
+}
+
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.training-card {
+    position: relative;
+    padding: 30px;
+    min-height: 235px;
+    background: #ffffff;
+    border: 1px solid #dfeaf4;
+    border-radius: 10px;
+    box-shadow: 0 7px 20px rgba(50, 90, 125, 0.08);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.training-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    background: #71a8d9;
+}
+
+.training-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(50, 90, 125, 0.13);
+}
+
+.card-number {
+    color: #75a9d5;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.training-card h3 {
+    color: #4e82b1;
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.training-card p {
+    color: #68717b;
+    font-size: 0.95rem;
+}
+
+/* ---------- Contact ---------- */
+.contact {
+    background: #f8fbfe;
+}
+
+.contact-content {
+    max-width: 850px;
+}
+
+.contact-content > p {
+    max-width: 720px;
+    font-size: 1.3rem;
+    color: #3f454c;
+    margin-bottom: 30px;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    padding: 38px 0;
+    background: #f4f8fc;
+    border-top: 1px solid #e4edf5;
+    text-align: center;
+    color: #69717a;
+}
+
+.site-footer p + p {
+    margin-top: 5px;
+}
+
+/* ---------- Responsive / Basic Mobile Design ---------- */
+@media (max-width: 850px) {
+    body::after {
+        width: 18px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 14px 0;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 18px;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .training-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .section {
+        padding: 65px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .training-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .training-card {
+        min-height: auto;
+    }
+
+    .learning-box {
+        padding: 35px 22px;
+    }
+
+    .contact-content > p {
+        font-size: 1.05rem;
+    }
+}

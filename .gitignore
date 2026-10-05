@@ -1,0 +1,21 @@
+# Environment files
+.env
+.env.*
+
+# PHP/server files
+*.log
+
+# IDE
+.vscode/
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Dependencies
+vendor/
+node_modules/
