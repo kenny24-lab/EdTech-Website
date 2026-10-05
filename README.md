@@ -39,4 +39,4 @@ EdTech-Website/
 ├── register.php
 ├── select.php
 └── style.css
-Author:Developed by Kenny Edwin
+Author: Developed by Kenny Edwin
